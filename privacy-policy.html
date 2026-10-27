@@ -25,6 +25,7 @@
 <p>If you email us, we use your email address and message only to reply to you, and we delete them when they are no longer needed.</p>
 <h2>Advertising</h2>
 <p>We advertise this site using services such as Google Ads and Microsoft Advertising. When you click one of our ads, those platforms may process data about your click under their own privacy policies.</p>
+<p>When you arrive from a Google ad, the page address contains a random click identifier (the "gclid"). We keep it only in your browser for the current tab session and add it to our affiliate links, so that if you buy, ClickBank can tell Google Ads that the ad led to a sale. This identifier does not include your name, email or payment details, and we do not store it on our servers.</p>
 <h2>Affiliate links</h2>
 <p>When you click an affiliate link, you leave our site and go to the seller's or retailer's website (for example ClickBank). That site may set cookies to track the referral and will process your data under its own privacy policy. We receive only aggregated sales information, not your personal details.</p>
 <h2>Your rights</h2>
@@ -37,5 +38,15 @@
 <p><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms of Use</a><a href="/affiliate-disclosure">Affiliate Disclosure</a></p>
 <p>&copy; 2026 The Workbench Guide</p>
 </div></footer>
+<script>
+(function(){
+  var p=new URLSearchParams(location.search), g=p.get('gclid');
+  try{ if(g) sessionStorage.setItem('gclid',g); else g=sessionStorage.getItem('gclid'); }catch(e){}
+  if(!g) return;
+  document.querySelectorAll('a[href*="affiliate=wbguide26"]').forEach(function(a){
+    try{ var u=new URL(a.href); u.searchParams.set('gclid',g); a.href=u.toString(); }catch(e){}
+  });
+})();
+</script>
 </body>
 </html>
