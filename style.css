@@ -30,3 +30,6 @@ table.facts td:first-child{font-weight:bold;width:40%}
 footer.site{border-top:1px solid var(--line);background:#fff;font:14px/1.6 Arial,sans-serif;color:var(--muted);padding:20px 0}
 footer.site a{color:var(--muted);margin-right:14px}
 @media (max-width:600px){body{font-size:17px}h1{font-size:26px}nav a{margin:0 12px 0 0}}
+.fig{margin:16px 0 20px}
+.fig img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+ol{padding-left:22px}
