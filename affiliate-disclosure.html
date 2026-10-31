@@ -12,7 +12,7 @@
 <body>
 <header class="site"><div class="wrap">
 <a class="logo" href="/">The Workbench <span>Guide</span></a>
-<nav><a href="/">Home</a><a href="/teds-woodworking-review">Reviews</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
+<nav><a href="/">Home</a><a href="/#reviews">Reviews</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
 </div></header>
 <main><div class="wrap">
 <h1>Affiliate Disclosure</h1>
@@ -32,7 +32,7 @@
   var p=new URLSearchParams(location.search), g=p.get('gclid');
   try{ if(g) sessionStorage.setItem('gclid',g); else g=sessionStorage.getItem('gclid'); }catch(e){}
   if(!g) return;
-  document.querySelectorAll('a[href*="affiliate=wbguide26"]').forEach(function(a){
+  document.querySelectorAll('a.btn[href*="clickbank"], a.btn[href*="affiliate=wbguide26"]').forEach(function(a){
     try{ var u=new URL(a.href); u.searchParams.set('gclid',g); a.href=u.toString(); }catch(e){}
   });
 })();

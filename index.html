@@ -12,15 +12,16 @@
 <body>
 <header class="site"><div class="wrap">
 <a class="logo" href="/">The Workbench <span>Guide</span></a>
-<nav><a href="/">Home</a><a href="/teds-woodworking-review">Reviews</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
+<nav><a href="/">Home</a><a href="/#reviews">Reviews</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
 </div></header>
 <main><div class="wrap">
 <h1>Honest reviews of woodworking plans and DIY resources</h1>
 <p class="meta">Independent reviews for beginners and hobbyists</p>
 <figure class="fig"><img src="/img/hero.svg" width="800" height="380" alt="Illustration of a workbench with a woodworking plan and tools"></figure>
 <p>Buying woodworking plans online can be confusing: big promises, huge numbers of "plans", and few straight answers. We look at what you actually get, who it suits, and when you'd be better off with something else.</p>
-<h2>Latest reviews</h2>
+<h2 id="reviews">Latest reviews</h2>
 <a class="card" href="/teds-woodworking-review"><strong>TedsWoodworking Review (2026)</strong>A large digital library of about 16,000 woodworking plans. Who it's for, pros and cons, and alternatives.</a>
+<a class="card" href="/my-shed-plans-review"><strong>My Shed Plans Review (2026)</strong>A digital collection of about 12,000 shed plans. What you get, who it suits, and what to check before you build.</a>
 <h2>How we review</h2>
 <ul>
 <li>We describe what's included based on the official product information and, where stated, our own hands-on notes.</li>
@@ -39,7 +40,7 @@
   var p=new URLSearchParams(location.search), g=p.get('gclid');
   try{ if(g) sessionStorage.setItem('gclid',g); else g=sessionStorage.getItem('gclid'); }catch(e){}
   if(!g) return;
-  document.querySelectorAll('a[href*="affiliate=wbguide26"]').forEach(function(a){
+  document.querySelectorAll('a.btn[href*="clickbank"], a.btn[href*="affiliate=wbguide26"]').forEach(function(a){
     try{ var u=new URL(a.href); u.searchParams.set('gclid',g); a.href=u.toString(); }catch(e){}
   });
 })();
